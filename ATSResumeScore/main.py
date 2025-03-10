@@ -38,8 +38,7 @@ if pdf_file is not None:
             # Compute similarity
             matching_score = cosine_similarity(resume_vector, job_desc_vector)[0][0] * 100
             st.header(f"Your score is : {int(matching_score)}/100")
-            st.write("Get Suggestions of Keywords to be added in your resume for better matching score. Score above 90 gets selected.")
-            with st.spinner("Extracting important keywords..."):
+            with st.spinner("Extracting important keywords to add..."):
                 kw_model = KeyBERT()
         
                 # Function to extract top N keywords using KeyBERT
