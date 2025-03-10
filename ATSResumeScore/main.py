@@ -17,6 +17,7 @@ if pdf_file is not None:
     for page in doc:
         resume_text += page.get_text()
     job_description=st.text_input("Enter the job decription:")
+    nltk.download("stopwords")
     stop_words=set(stopwords.words("english"))
     def preprocess_text(text):
         text=text.lower()
